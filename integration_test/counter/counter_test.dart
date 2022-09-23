@@ -9,7 +9,19 @@ void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   testWidgets(
-    'Should terms pages then accept button and confirm button',
+    'Should open counter pages then click increase button and verify text is 1',
+    (tester) async {
+      app.main(
+        home: const MyHomePage(title: 'Flutter UI Test'),
+      );
+
+      // Counter Screen
+      await CounterTestScreen(tester).run();
+    },
+  );
+
+  testWidgets(
+    'Should open counter pages then click increase button and verify text is 1',
     (tester) async {
       app.main(
         home: const MyHomePage(title: 'Flutter UI Test'),
