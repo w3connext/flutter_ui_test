@@ -1,0 +1,9 @@
+screen: "Counter"
+specs:
+  click_increase_button:
+    key: "keyIncrementButton"
+    type: "tap"
+  verify_increase_number_is_1:
+    text: "1"
+    type: "verify"
+    matcher: "1"
